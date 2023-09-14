@@ -78,7 +78,7 @@ int main(int argc, char** argv)
             if (status == NVAPI_SETTING_NOT_FOUND)
             {
                 throw std::runtime_error("Failed to get FRL setting! Make sure that setting has been saved at least "
-                                         "once via Nvidia control panel.");
+                                         "once via NVIDIA Control Panel.");
             }
             assertSuccess(status, "Failed to set FRL setting!");
         }
