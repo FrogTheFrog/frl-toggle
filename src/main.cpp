@@ -221,7 +221,7 @@ int main(int argc, char** argv)
             std::cout << "    frltoggle 60 --save-previous-or-reuse     sets the FPS limit to 60 and saves the previous value to a file." << std::endl << 
                          "                                              If the file already exists, its value will be validated and reused instead." << std::endl;
             std::cout << "    frltoggle load-file                       loads the value from file (e.g., saved using \"--save-previous\") and uses it to set FRL." << std::endl << 
-                         "                                              File is removed afterwards if no errors occurred." << std::endl;
+                         "                                              File is removed afterwards if no errors occur." << std::endl;
             std::cout << std::endl;
             // clang-format on
             return args.size() < 2 ? EXIT_SUCCESS : EXIT_FAILURE;
