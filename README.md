@@ -17,5 +17,5 @@ Run the app in terminal for usage instruction, but in case you're lazy:
     frltoggle 60 --save-previous-or-reuse     sets the FPS limit to 60 and saves the previous value to a file.
                                               If the file already exists, its value will be validated and reused instead.
     frltoggle load-file                       loads the value from file (e.g., saved using "--save-previous") and uses it to set FRL.
-                                              File is removed afterwards if no errors occurred.
+                                              File is removed afterwards if no errors occur.
 ```
