@@ -83,6 +83,10 @@
         "xlocmes": "cpp",
         "xlocmon": "cpp",
         "xloctime": "cpp",
-        "regex": "cpp"
-    }
+        "regex": "cpp",
+        "ranges": "cpp",
+        "fstream": "cpp",
+        "codecvt": "cpp"
+    },
+    "C_Cpp.default.configurationProvider": "go2sh.cmake-integration"
 }
