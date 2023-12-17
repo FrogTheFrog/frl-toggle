@@ -3,7 +3,7 @@
 App for Windows to toggle Nvidia's Frame Rate Limiter (FRL) via command line
 
 # How to use
-### ---> Make sure that the global FRL setting has been saved at least once via the Nvidia control panel! <---
+### Make sure that the global FRL setting has been saved at least once via the Nvidia control panel!
 
 ----
 
