@@ -197,6 +197,15 @@ void remove_file(const std::string& filename)
     // Note: will throw on actual error
     std::filesystem::remove(filename);
 }
+
+//--------------------------------------------------------------------------------------------------
+
+std::string get_fps_filename(const std::string& exec_filename)
+{
+    std::filesystem::path path{exec_filename);
+    path.replace_extension("saved_fps");
+    return path.generic_string();
+}
 }  // namespace
 
 //--------------------------------------------------------------------------------------------------
@@ -207,7 +216,7 @@ int main(int argc, char** argv)
     {
         const std::vector<std::string> args(argv, argv + argc);
         const auto                     parsed_args{parseArgs(args)};
-        const std::string fps_filename(std::filesystem::path(args.at(0)).stem().generic_string() + ".saved_fps");
+        const std::string              fps_filename{get_fps_filename(args.at(0))};
 
         if (!parsed_args)
         {
