@@ -219,7 +219,7 @@ int main(int argc, char** argv)
             std::cout << "    frltoggle 60                              sets the FPS limit to 60 (allowed values are [" << FRL_FPS_MIN <<  ", " << FRL_FPS_MAX << "])." << std::endl;
             std::cout << "    frltoggle 60 --save-previous              sets the FPS limit to 60 and saves the previous value to a file." << std::endl;
             std::cout << "    frltoggle 60 --save-previous-or-reuse     sets the FPS limit to 60 and saves the previous value to a file." << std::endl << 
-                         "                                              If the file already exists, its value will be validated and reused instead." << std::endl;
+                         "                                              If the file already exists, its value will be validated and reused instead." << std::endl <<
                          "                                              This is useful in case the system has crashed and we want to reuse the value from before the crash." << std::endl;
             std::cout << "    frltoggle load-file                       loads the value from file (e.g., saved using \"--save-previous\") and uses it to set FRL." << std::endl << 
                          "                                              File is removed afterwards if no errors occur." << std::endl;
