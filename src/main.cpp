@@ -202,7 +202,7 @@ void remove_file(const std::string& filename)
 
 std::string get_fps_filename(const std::string& exec_filename)
 {
-    std::filesystem::path path{exec_filename);
+    std::filesystem::path path{exec_filename};
     path.replace_extension("saved_fps");
     return path.generic_string();
 }
