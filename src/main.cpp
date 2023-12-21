@@ -255,13 +255,20 @@ int main(int argc, char** argv)
 
         // Handle special case of getting settings
         {
+            NvU32      retrieved_value{FRL_FPS_DEFAULT};
             const auto status{nvapi.DRS_GetSetting(drs_session, drs_profile, FRL_FPS_ID, &drs_setting)};
-            if (status == NVAPI_SETTING_NOT_FOUND)
+            if (status != NVAPI_SETTING_NOT_FOUND)
             {
-                throw std::runtime_error("Failed to get FRL setting! Make sure that setting has been saved at least "
-                                         "once via NVIDIA Control Panel.");
+                assertSuccess(status, "Failed to get FRL setting!");
+                retrieved_value = drs_setting.u32CurrentValue;
             }
-            assertSuccess(status, "Failed to get FRL setting!");
+
+            drs_setting                 = {};
+            drs_setting.version         = NVDRS_SETTING_VER;
+            drs_setting.settingId       = FRL_FPS_ID;
+            drs_setting.settingType     = NVDRS_DWORD_TYPE;
+            drs_setting.settingLocation = NVDRS_CURRENT_PROFILE_LOCATION;
+            drs_setting.u32CurrentValue = retrieved_value;
         }
 
         if (std::get_if<StatusOption>(&*parsed_args))
